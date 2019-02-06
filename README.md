@@ -1,6 +1,6 @@
-#simple-kprobe
+# simple-kprobe
 
-##Simple Kprobe Implementation For An Absolute Beginner 
+## Simple Kprobe Implementation For An Absolute Beginner 
 
 Sourced from: https://opensourceforu.com/2011/04/kernel-debugging-using-kprobe-and-jprobe/
 
@@ -46,15 +46,15 @@ Copy the address of the ip_rcv one. I recommend rechecking the value of the addr
    After you've checked all this, run: sudo make
 3. Once you've gotten the Makefile to work, it is mostly smooth sailing from here. The output of the command should look something like this:
 
-thenuga98@Thenuga:~/myModule$ sudo make  
-make -C '/lib/modules/4.20.2/build' SUBDIRS=/home/thenuga98/myModule modules  
-make[1]: Entering directory '/home/thenuga98/Downloads/linux-4.20.2'  
-  CC [M]  /home/thenuga98/myModule/mod1.o  
-  Building modules, stage 2.  
-  MODPOST 1 modules  
-  CC      /home/thenuga98/myModule/mod1.mod.o  
-  LD [M]  /home/thenuga98/myModule/mod1.ko  
-make[1]: Leaving directory '/home/thenuga98/Downloads/linux-4.20.2'  
+	thenuga98@Thenuga:~/myModule$ sudo make  
+	make -C '/lib/modules/4.20.2/build' SUBDIRS=/home/thenuga98/myModule modules  
+	make[1]: Entering directory '/home/thenuga98/Downloads/linux-4.20.2'  
+  	CC [M]  /home/thenuga98/myModule/mod1.o  
+  	Building modules, stage 2.  
+  	MODPOST 1 modules  
+  	CC      /home/thenuga98/myModule/mod1.mod.o  
+  	LD [M]  /home/thenuga98/myModule/mod1.ko  
+	make[1]: Leaving directory '/home/thenuga98/Downloads/linux-4.20.2'  
 
   If it doesn't look like this but the command executed without errors, you will find that the object and kernel module objects have not been generated. As mentioned    before, the Makefile needs to generate the required files. Go back to step 2 and tweak your Makefile to compile and generate only the required files.
 
